@@ -5,6 +5,7 @@ import {
   darkTheme,
   getDefaultWallets,
   RainbowKitProvider,
+  Theme 
 } from '@rainbow-me/rainbowkit';
 import {
   chain,
@@ -36,16 +37,68 @@ const wagmiClient = createClient({
   provider
 })
 
+const myCustomTheme: Theme = {
+  blurs: {
+    modalOverlay: '...',
+  },
+  colors: {
+    accentColor: '...',
+    accentColorForeground: '...',
+    actionButtonBorder: '#29346200',
+    actionButtonBorderMobile: '#29346200',
+    actionButtonSecondaryBackground: '...',
+    closeButton: '...',
+    closeButtonBackground: '...',
+    connectButtonBackground: '...',
+    connectButtonBackgroundError: '...',
+    connectButtonInnerBackground: '...',
+    connectButtonText: '...',
+    connectButtonTextError: '...',
+    connectionIndicator: '...',
+    error: '...',
+    generalBorder: '#29346200',
+    generalBorderDim: '...',
+    menuItemBackground: '...',
+    modalBackdrop: '#29346275',
+    modalBackground: '#293462',
+    modalBorder: '...',
+    modalText: '#fff',
+    modalTextDim: '...',
+    modalTextSecondary: '...',
+    profileAction: '...',
+    profileActionHover: '...',
+    profileForeground: '...',
+    selectedOptionBorder: '#29346200',
+    standby: '...',
+  },
+  fonts: {
+    body: 'Bungee Inline',
+  },
+  radii: {
+    actionButton: '...',
+    connectButton: '...',
+    menuButton: '...',
+    modal: '...',
+    modalMobile: '...',
+  },
+  shadows: {
+    connectButton: 'large',
+    dialog: '...',
+    profileDetailsAction: '...',
+    selectedOption: '...',
+    selectedWallet: '...',
+    walletLogo: '...',
+  },
+};
+
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider
         chains={chains} 
-        theme={darkTheme({
-          borderRadius: "none",
-          accentColor: "black",
-          accentColorForeground: "white"
-      })}>
+        
+        theme={myCustomTheme}>
         <AppWrapper>
           <Component {...pageProps} />
         </AppWrapper>

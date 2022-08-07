@@ -16,7 +16,7 @@ const NFTCard = ({ nfts }) => {
             ?
             nfts.map((nft, index) => {
                 return (
-                    <div key={nft.token.tokenId} className="border-2 border-white m-[2px] w-10/12 sm:w-5/12 md:w-3/12  border-solid flex flex-row flex-wrap justify-center">
+                    <div key={nft.token.tokenId} className=" justify-center">
                         <MediaConfiguration
                         networkId="1"                        
                         strategy={zdkStrategyMainnet}
@@ -26,7 +26,7 @@ const NFTCard = ({ nfts }) => {
                         }}                    
                         >
                         <NFTPreview
-                            href={`https://zora.co/collections/0x230864bab819a49a3e3cd634eb266f9042d22e82/${nft.token.tokenId}`}
+                            href={`https://zora.co/collections/0xcaa316D4831e5486f05fAD91D55910Bc6B369438/${nft.token.tokenId}`}
                             contract={nft.token.collectionAddress}
                             id={nft.token.tokenId}
                             showBids={false}
@@ -36,15 +36,7 @@ const NFTCard = ({ nfts }) => {
                         <div className="text-white">
                             { nft.marketsSummary.length === 0 ? (
                             <div className="mb-5">
-                                <div>
-                                    {"Listing Status: " + "INACTIVE"}
-                                </div>                            
-                                <div>
-                                    {"Listing Price: " + "N/A"}
-                                </div>
-                                <div>
-                                    {"Finders Fee: " + "N/A"}
-                                </div>                                  
+                                        
                             </div>
                             ) : ( 
                             <div className="mb-5"> 
@@ -60,7 +52,7 @@ const NFTCard = ({ nfts }) => {
                             </div>
                             )}
                         </div>
-                        <AskWrite_disclosure nft={nft} />
+                        
                     </div>
                 )
             }

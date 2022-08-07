@@ -38,7 +38,7 @@ const Gallery: NextPage = () => {
 
   // read call to get current totalSupply
   const { data: totalSupplyData, isLoading, isSuccess, isFetching  } = useContractRead({
-    addressOrName: "0xf8a7C2b2eaff812591578a6dEc6e4C5A79b42D04", // Sofja Collection
+    addressOrName: "0xcaa316D4831e5486f05fAD91D55910Bc6B369438", // Warp
     contractInterface: editionsABI.abi,
     functionName: 'totalSupply',
     args: [],
@@ -63,7 +63,7 @@ const Gallery: NextPage = () => {
     ` 
       query ListCollections {
         tokens(
-          where: {collectionAddresses: "0xf8a7C2b2eaff812591578a6dEc6e4C5A79b42D04"}
+          where: {collectionAddresses: "0xcaa316D4831e5486f05fAD91D55910Bc6B369438"}
           pagination: {limit: 100}
         ) {
           nodes {
@@ -192,26 +192,12 @@ const Gallery: NextPage = () => {
   return (
     <div>
       <Header />
-      <div className=" min-h-screen bg-black flex flex-row flex-wrap justify-center">
-      <Switch.Group>
-        <div className=" mt-20 mb-5 w-full flex flex-row justify-center items-center">
-            <Switch.Label className="mr-4 font-bold text-white">FULL COLLECTION</Switch.Label>
-            <Switch
-              checked={enabled}
-              onChange={setEnabled}
-              className={`${enabled ? `bg-[#4A524C]` : `bg-[#B8C5C9]`}
-                  relative inline-flex h-[30px] w-[66px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus-visible:ring-2  focus-visible:ring-white focus-visible:ring-opacity-75`}
-              >
-              <span className="sr-only">Use setting</span>
-              <span
-                  aria-hidden="true"
-                  className={`${enabled ? 'translate-x-9' : 'translate-x-0'}
-                    pointer-events-none inline-block h-[26px] w-[26px] transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out`}
-              />
-            </Switch>
-            <Switch.Label className="ml-4 font-bold text-white">MY COLLECTION</Switch.Label>
-        </div>
-      </Switch.Group>
+      <div className="text-center text-col-300 pt-20 font-ps text-7xl justify-center mt-28 md:mt-0" >
+          Warp Riders Gallery
+      </div>
+      <div className=" min-h-screen  flex flex-row flex-wrap justify-center">
+        
+        
       {/* <div className="w-full flex flex-row justify-center text-[#202716] font-bold">
         <a 
             style={{ textDecoration: "none" }}
@@ -223,7 +209,7 @@ const Gallery: NextPage = () => {
         </a>
       </div> */}
 
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="">
         {
             loading ? "loading . . . " : 
             <>
