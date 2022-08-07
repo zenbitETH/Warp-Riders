@@ -50,17 +50,17 @@ const Protocol: NextPage = () => {
   }
 
   const [ asksNFT, setAsksNFT] = useState<nftInfo>({
-    "contractAddress": "0x7e6663E45Ae5689b313e6498D22B041f4283c88A",
+    "contractAddress": "0xcaa316D4831e5486f05fAD91D55910Bc6B369438",
     "tokenId": "1"
   })
 
   const [ offersNFT, setOffersNFT] = useState<nftInfo>({
-    "contractAddress": "0x7e6663E45Ae5689b313e6498D22B041f4283c88A",
+    "contractAddress": "0xcaa316D4831e5486f05fAD91D55910Bc6B369438",
     "tokenId": "2"
   })
 
   const [ auctionsNFT, setAuctionsNFT] = useState<nftInfo>({
-    "contractAddress": "0x7e6663E45Ae5689b313e6498D22B041f4283c88A",
+    "contractAddress": "0xcaa316D4831e5486f05fAD91D55910Bc6B369438",
     "tokenId": "3"
   })
 
