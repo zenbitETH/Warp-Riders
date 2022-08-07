@@ -1,14 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Lexend+Deca:wght@200;400;600;700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html,
 body {
-  background-color: black;
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@apply
+bg-back-100
+}
+
+.App {
+  @apply 
+  flex flex-col overflow-auto h-screen 
+  text-white
+  text-center
+  -mt-5 xl:mt-0
+}
+
+.teamIMG {
+  @apply
+  rounded-full h-32 w-32 mx-auto
+}
+
+.pages {
+  @apply
+  hover:text-col-200 hover:animate-pulse
+  mt-4
+  md:text-xl
 }
 
 a {

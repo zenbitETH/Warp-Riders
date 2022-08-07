@@ -14,11 +14,48 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="flex flex-col items-center">        
-        <h1 className="text-white">
-          {'<<< ZORA >>>'}
-        </h1>
-      </main>
+      <div className="App ">
+        <div>
+          <div className="text-center text-col-300 pt-20 font-ps text-9xl justify-center mt-28 md:mt-0" >
+            Warp Riders
+          </div>
+          <div className='font-lex font-light text-xl'>
+            NFT Community for web3 cities  /  developed @ Metabolism 2022
+          </div>
+          <div className='font-lex font-light text-4xl'>
+           
+          </div>
+          <div className="text-center text-col-100 font-ps text-5xl justify-center mt-5" >
+                Available now!
+            </div>
+        </div>
+        <div className='grid  mx-auto gap-5 mt-10'>
+          <Image src="https://ipfs.io/ipfs/bafybeicwiyesnrznxhsyedw46wfsxue47j43alunreacw2zpj7mqu3gady"
+            width={500}
+            height={500}
+            className="rounded-xl"/>
+            <div className="text-center text-col-100 font-ps text-5xl justify-center mt-5" >
+                Web3 Citizen
+            </div>
+        </div>
+        <div className="text-center text-col-400 font-ps text-5xl justify-center mt-48" >
+            More available soon
+        </div>
+        <div className="text-center text-col-200 font-ps text-5xl justify-center mt-48" >
+            Built with
+        </div>
+        <div className='grid grid-cols-2 mx-96 text-2xl font-lex font gap-10 mt-3 mb-10'>
+          <div className='bg-col-200 text-back-100 rounded-xl p-5'>Zora</div>
+          <div className='bg-col-200 text-back-100 rounded-xl p-5'>Tranqui.eth marketplace template</div>
+        </div>
+        <div className="text-center text-col-200 font-ps text-5xl justify-center" >
+            by:
+        </div>
+        <a href="https://github.com/HabacucMX">
+            <div className="teamMB mb-20"><img src="https://avatars.githubusercontent.com/u/57845110?s=400&u=5460231e3addfd30b2f4f35650c81206e3d7552f&v=4" className="teamIMG"/>
+              habacuc.eth<div className="text-lg text-rider-500"></div></div></a>
+        
+      </div>
     </div>
   )
 }
