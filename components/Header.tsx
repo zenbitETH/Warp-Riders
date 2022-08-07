@@ -5,37 +5,33 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 export const Header = () => {
 
   return (
-    <div className="bg-black text-white flex flex-row justify-center">
-      <div className="fixed top-0 right-0">
-        <ConnectButton 
-          accountStatus="address" 
-          showBalance={false}
-        />
-      </div>
-      <div className="z-10 bg-black fixed top-12 sm:top-0 px-4 py-w border-2 border-solid border-white flex flex-row w-fit space-x-4">
+      <div className="text-white fixed grid grid-cols-4 text-center font-ps z-10 top-0 right-0 left-0">
         <Link
           href="/"
         >
-          <a className="hover:text-[#f53bc3]">
+          <a className="pages">
           HOME
           </a>
         </Link>
         <Link
           href="/mint"
         >
-          <a className="hover:text-[#f53bc3]">
+          <a className="pages">
             MINT
           </a>
         </Link>
         <Link
           href="/gallery"
         >
-          <a className="hover:text-[#f53bc3]">
+          <a className="pages">
             GALLERY
           </a>
         </Link>
+        <ConnectButton 
+          accountStatus="address" 
+          showBalance={false}
+        />
       </div>
-    </div>
   )
 
 };
